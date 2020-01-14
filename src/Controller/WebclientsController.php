@@ -12,6 +12,13 @@ use App\Controller\AppController;
  */
 class WebclientsController extends AppController
 {
+	
+	public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+    }
+
     /**
      * Index method
      *
@@ -22,6 +29,21 @@ class WebclientsController extends AppController
         $webclients = $this->paginate($this->Webclients);
 
         $this->set(compact('webclients'));
+		$this->set('_serialize', 'webclients');
+    }
+	
+	public function list()
+    {
+        $webclients = $this->paginate($this->Webclients);
+		
+		$result = true;
+		$this->set([
+            'webclients' => $webclients,
+            '_serialize' => ['webclients']
+        ]);
+
+        
+        $this->RequestHandler->renderAs($this, 'json');
     }
 
     /**
@@ -38,6 +60,7 @@ class WebclientsController extends AppController
         ]);
 
         $this->set('webclient', $webclient);
+		$this->RequestHandler->renderAs($this, 'json');
     }
 
     /**
@@ -58,6 +81,29 @@ class WebclientsController extends AppController
             $this->Flash->error(__('The webclient could not be saved. Please, try again.'));
         }
         $this->set(compact('webclient'));
+    }
+	
+	public function api($endpoint, $p256dh, $auth)
+    {
+        $webclient = $this->Webclients->newEntity();
+			$dados = [
+				'endpoint' => $endpoint,
+				'p256dh' => $p256dh,
+				'auth' => $auth
+			];
+            $webclient = $this->Webclients->patchEntity($webclient, $dados);
+            if ($this->Webclients->save($webclient)) {
+                //return true;
+            }
+		
+		$result = true;
+		$this->set([
+            'result' => $result,
+            '_serialize' => ['result']
+        ]);
+
+        
+        $this->RequestHandler->renderAs($this, 'json');
     }
 
     /**
