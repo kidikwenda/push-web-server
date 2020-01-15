@@ -1,0 +1,82 @@
+2020-01-14 14:25:57 Error: [RuntimeException] Unknown command `cake serve`. Run `cake --help` to get the list of valid commands. in C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 347
+Stack Trace:
+#0 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'serve')
+#1 C:\laragon\www\push-web-server\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2020-01-14 14:26:11 Error: [RuntimeException] Unknown command `cake runserver`. Run `cake --help` to get the list of valid commands. in C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 347
+Stack Trace:
+#0 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'runserver')
+#1 C:\laragon\www\push-web-server\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2020-01-14 15:06:16 Error: [InvalidArgumentException] Could not infer database type from driver in C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\ConfigurationTrait.php on line 156
+Stack Trace:
+#0 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\ConfigurationTrait.php(81): Migrations\Command\Migrate->getAdapterName('Sqlite')
+#1 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Console\Command\AbstractCommand.php(101): Migrations\Command\Migrate->getConfig()
+#2 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(63): Phinx\Console\Command\AbstractCommand->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(63): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(34): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\Migrate.php(66): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\laragon\www\push-web-server\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(1011): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(272): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#12 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(169): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#14 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#15 C:\laragon\www\push-web-server\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2020-01-14 15:11:05 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [1049] Unknown database 'my_web_push' in C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 82
+Stack Trace:
+#0 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(116): Phinx\Db\Adapter\PdoAdapter->createPdoConnection('mysql:host=loca...', 'root', '', Array)
+#1 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(148): Phinx\Db\Adapter\MysqlAdapter->connect()
+#2 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(496): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#3 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#4 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(77): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#5 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(63): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(34): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\Migrate.php(66): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\laragon\www\push-web-server\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(1011): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(272): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#14 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(169): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#16 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#17 C:\laragon\www\push-web-server\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
+Caused by: [PDOException] SQLSTATE[HY000] [1049] Unknown database 'my_web_push' in C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 79
+Stack Trace:
+#0 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(79): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(116): Phinx\Db\Adapter\PdoAdapter->createPdoConnection('mysql:host=loca...', 'root', '', Array)
+#2 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(148): Phinx\Db\Adapter\MysqlAdapter->connect()
+#3 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\AdapterWrapper.php(496): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#4 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#5 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(77): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#6 C:\laragon\www\push-web-server\vendor\robmorgan\phinx\src\Phinx\Console\Command\Migrate.php(63): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\CommandTrait.php(34): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Command\Migrate.php(66): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\laragon\www\push-web-server\vendor\symfony\console\Command\Command.php(255): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(1011): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(272): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\laragon\www\push-web-server\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#15 C:\laragon\www\push-web-server\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(169): Cake\Console\Shell->runCommand(Array, true, Array)
+#16 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#17 C:\laragon\www\push-web-server\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#18 C:\laragon\www\push-web-server\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+
